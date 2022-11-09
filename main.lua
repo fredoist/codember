@@ -1,1 +1,1 @@
-print('¡Hola mundo!')
+local reto1 = require('reto-1/main')
