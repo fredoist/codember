@@ -1,28 +1,40 @@
 local db = {}
 for row in io.lines('reto-1/users.txt') do
-  db[#db+1] = row
+  table.insert(db, row)
 end
--- insert an empty line at the end for the loop below
 table.insert(db, '')
 
-local users = {}
-local user = ''
-for _, value in pairs(db) do
-  if value ~= '' and db[#db+1] ~= '' then
-    user = user..' '..value
+local records = {}
+local record = ''
+for _, row in pairs(db) do
+  if row ~= '' and db[#db+1] ~= '' then
+    record = record..' '..row
   else
-    users[#users+1] = user
-    user = ''
+    table.insert(records, record)
+    record = ''
   end
 end
 
--- todo: find a better manner to find valid users without using multiples if
-local valids = {}
-local params = 'usr: eme: psw: age: loc: fll:'
-for _, value in pairs(users) do
-  if string.find(value, 'usr:') and string.find(value, 'eme:') and string.find(value, 'psw:') and string.find(value, 'age:') and string.find(value, 'loc:') and string.find(value, 'fll:') then
-    table.insert(valids, value)
+local users = {}
+local params = {'usr', 'eme', 'psw', 'age', 'loc', 'fll'}
+local count = 0
+for _, user in pairs(records) do
+  for _, param in pairs(params) do
+    if string.find(user, param) then
+      count = count + 1
+    end
   end
+  if count == #params then
+    table.insert(users, user)
+  end
+  count = 0
 end
 
-print('Total de usuarios: '..#valids..'; último usuario valido: '..valids[#valids])
+local M = {}
+function M.solve()
+  local total = #users
+  local user = string.match(users[#users], '@%w+')
+  return 'Usuarios totales: '..total..'; Último usuario: '..user
+end
+
+return M
