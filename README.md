@@ -8,7 +8,7 @@
  \/____/ \/___/  \/__,_ / \/____/ \/_/\/_/\/_/  \/___/  \/____/  \/_/ 
 
 ```
-Solución a los retos de codember.dev utilizando [Lua](https://www.lua.org/)
+Solución a los retos de codember.dev usando [Lua](https://www.lua.org/)
 
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/fredoist)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alfredogonzalezr)
