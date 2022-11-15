@@ -26,6 +26,6 @@ Puedes ejecutar las soluciones usando el comando:
 ```shell
   # ejecuta todas las soluciones al mismo tiempo
   lua main.lua
-  # ejecuta una solución en especifíco
+  # ejecuta una solución en específico
   lua reto-1/main.lua
 ```
