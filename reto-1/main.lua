@@ -34,7 +34,7 @@ local M = {}
 function M.solve()
   local total = #users
   local user = string.match(users[#users], '@%w+')
-  return '$ submit '..total..user
+  return total..user
 end
 
 return M

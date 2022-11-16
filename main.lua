@@ -3,7 +3,6 @@ local reto2 = require('reto-2/main')
 
 local solutions = { reto1, reto2 }
 
-for i=1, #solutions do
-  print('✅ Solución al reto no. '..i..':')
-  print('\n\t'..solutions[i].solve()..'\n')
+for i = 1, #solutions do
+  print('✅ Solución al reto no. '..i..': $ submit '..solutions[i].solve())
 end
