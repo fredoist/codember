@@ -34,7 +34,7 @@ local M = {}
 function M.solve()
   local total = #users
   local user = string.match(users[#users], '@%w+')
-  return 'Usuarios totales: '..total..'; Último usuario: '..user
+  return '$ submit '..total..user
 end
 
 return M
