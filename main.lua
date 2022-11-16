@@ -1,8 +1,9 @@
 local reto1 = require('reto-1/main')
+local reto2 = require('reto-2/main')
 
-local solutions = { reto1 }
+local solutions = { reto1, reto2 }
 
 for i=1, #solutions do
   print('✅ Solución al reto no. '..i..':')
-  print('\n\t'..solutions[i].solve())
+  print('\n\t'..solutions[i].solve()..'\n')
 end
