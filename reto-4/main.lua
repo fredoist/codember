@@ -1,8 +1,7 @@
 local start = 11098
 local last = 98123
 
-function VALIDATE(number)
-  local password = tostring(number)
+local function isValidPassword(password)
   if password:find('55') == nil then
     return false
   end
@@ -14,16 +13,22 @@ function VALIDATE(number)
   return true
 end
 
-local passwords = {}
-for i = start, last do
-  if VALIDATE(i) then
-    table.insert(passwords, i)
+local function getPasswords()
+  local passwords = {}
+  for password = start, last do
+    password = tostring(password)
+    if isValidPassword(password) then
+      table.insert(passwords, password)
+    end
   end
+  return passwords
 end
 
 local M = {}
 function M.solve()
-  return #passwords..'-'..passwords[56]
+  local passwords = getPasswords()
+  local total, correctPassword = #passwords, passwords[56]
+  return total..'-'..correctPassword
 end
 
 return M

@@ -5,6 +5,7 @@ local reto4 = require('reto-4/main')
 
 local solutions = { reto1, reto2, reto3, reto4 }
 
-for i = 1, #solutions do
-  print('✅ Solución al reto no. '..i..': $ submit '..solutions[i].solve())
+for number = 1, #solutions do
+  local solution = solutions[number].solve()
+  print('✅ Solución al reto no. '..number..': $ submit '..solution)
 end
