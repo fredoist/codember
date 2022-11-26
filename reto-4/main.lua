@@ -1,6 +1,3 @@
-local start = 11098
-local last = 98123
-
 local function isValidPassword(password)
   if password:find('55') == nil then
     return false
@@ -14,6 +11,8 @@ local function isValidPassword(password)
 end
 
 local function getPasswords()
+  local start = 11098
+  local last = 98123
   local passwords = {}
   for password = start, last do
     password = tostring(password)
