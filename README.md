@@ -22,10 +22,4 @@ Lua es un lenguaje de programación multiparadigma, imperativo, estructurado y b
 
 Las soluciones se encuentran seccionadas por reto, dentro de su respectiva carpeta se encuentra un archivo `README.md` que describe el problema planteado, así como cualquier otro archivo requerido para el problema, la solución se encuentra dentro del archivo `main.lua`.
 
-Puedes ejecutar las soluciones usando el comando:
-```shell
-  # ejecuta todas las soluciones al mismo tiempo
-  lua main.lua
-  # ejecuta una solución en específico
-  lua reto-1/main.lua
-```
+Puedes ejecutar las soluciones usando el comando: `lua main.lua`
